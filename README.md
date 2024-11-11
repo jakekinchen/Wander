@@ -1,4 +1,4 @@
-# Wander
+# Wander - Your Audio Guide to Exploration
 
 ![wander-mockups](https://github.com/user-attachments/assets/c3a138db-67d0-4820-b83d-344de06efc37)
 
