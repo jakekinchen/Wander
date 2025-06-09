@@ -36,6 +36,10 @@ In an era so chock-full of screens and media capturing your attention, Wander se
    
 4. **TourView:**
    - All information provided in audio form is also available in text form within the TourView for later reference.
+## Data Enrichment Pipeline
+
+Wander now includes a `LocalInformationService` that uses MapKit local search to fetch nearby points of interest. Requests are kept to a 500 meter radius and return a name, coordinate, and optional address to enrich the narration.
+
 
 ## Screenshots
 

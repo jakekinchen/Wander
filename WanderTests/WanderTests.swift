@@ -6,12 +6,20 @@
 //
 
 import Testing
+import CoreLocation
 @testable import Wander
 
 struct WanderTests {
 
     @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+        // Example placeholder test
     }
 
+    @Test func localInformationServiceReturnsEmptyOnLinux() async throws {
+        #if os(Linux)
+        let service = LocalInformationService()
+        let pois = try await service.fetchNearbyPoints(for: CLLocationCoordinate2D(latitude: 0, longitude: 0))
+        #expect(pois.isEmpty)
+        #endif
+    }
 }
