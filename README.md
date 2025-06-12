@@ -19,6 +19,8 @@ In an era so chock-full of screens and media capturing your attention, Wander se
 - **Content Filters:** Allows users to filter content based on historical, commercial, and activity-based categories. The default setting includes all categories.
 - **Voice Mode Activation:** Activate Wander’s voice mode by clicking **Activate Wander** in the Map View. Information provided in text form is also stored in the TourView.
 - **Immersive Experience:** Designed to enhance your exploration without the need to constantly interact with your phone.
+- **Graceful Permission Handling:** Requests location services and Bluetooth beacon access only when needed, guiding users to settings if denied.
+- **Background Audio:** Configures an audio session so narration continues even when the screen is off.
 
 ## How It Works
 

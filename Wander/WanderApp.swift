@@ -7,9 +7,13 @@
 
 import SwiftUI
 import SwiftData
+import AVFoundation
 
 @main
 struct WanderApp: App {
+    @StateObject private var locationManager = LocationManager()
+    @StateObject private var beaconManager = BeaconManager()
+
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -22,6 +26,19 @@ struct WanderApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+
+    init() {
+        configureAudioSession()
+    }
+
+    private func configureAudioSession() {
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, options: [.duckOthers, .defaultToSpeaker])
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print("AudioSession error: \(error)")
+        }
+    }
 
     var body: some Scene {
         WindowGroup {
